@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Hand Gesture Sensor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="background">
+  <div class="container">
+  
+    <center>
+
+
+        <h3 class="btn-warning heading"> EMOTION TO EMOJI APP <br> <span class="emojis">👍 ✌ 👌 </span></h3>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to PREDICT THE GESTURE
+      	<br>
+        <b class = "btn btn-success">Is it a yes symbol? </b>
+        <br>
+        <b class="btn btn-primary">Is it an ace symbol ?</b>
+        <br>
+        <b class="btn btn-danger">Is it a three finger symbol?</b>
+        <br> <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12" style="margin-left: 100px; margin-top: 113px;">
+          <label class=" btn btn-info">Webcam View - </label>
+          
+          <div id="camera"></div>
+
+        <br><br>
+        <button onclick="takeSnapshot()" class = "btn btn-warning" > CAPTURE IMAGE</button>
+
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+          <label>PREDICTION 1:</label> 
+        <p class="emotion_name" id="result_emotion_name"> </p>
+        <p class="emoji" id="update_emoji"></p>
+
+        <div class="col-md-4 col-sm-12 col-xs-12" style="margin-left:80px;">
+             <label>PREDICTION 2:</label> 
+            <p class="emotion_name" id="result_emotion_name2"> </p>
+            <p class="emoji" id="update_emoji2"></p>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12" style="margin-left:260px;">
+        <label class="btn btn-danger" id="snapshot-button" >Snapshot-</label>
+        <div id="result"></div>
+        <br> <br>
+        <button onclick="check()" class="btn btn-danger">PREDICT REACTION</button>
+    </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
