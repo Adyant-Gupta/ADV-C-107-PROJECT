@@ -40,26 +40,26 @@ function gotResult(error,results) {
         document.getElementById("result_emotion_name").innerHTML = results[0].label;
         document.getElementById("result_emotion_name2").innerHTML = results[1].label;
     }
-    if (results[0].label == "happy") {
-        document.getElementById("update_emoji").innerHTML = "😃";
+    if (results[0].label == "this looks amazing!!") {
+        document.getElementById("update_emoji").innerHTML = "👌";
     }
     
-        if (results[0].label == "angry") {
-        document.getElementById("update_emoji").innerHTML = "👿";
+        if (results[0].label == "all the best!!") {
+        document.getElementById("update_emoji").innerHTML = "👍";
     }
-            if (results[0].label == "sad") {
-        document.getElementById("update_emoji").innerHTML = "😢";
-    }
-    
-        if (results[1].label == "happy") {
-        document.getElementById("update_emoji").innerHTML = "😃";
+            if (results[0].label == "that was a marvelous victory!!") {
+        document.getElementById("update_emoji").innerHTML = "✌";
     }
     
-        if (results[1].label == "angry") {
-        document.getElementById("update_emoji").innerHTML = "👿";
+        if (results[1].label == "this looks amazing!!") {
+        document.getElementById("update_emoji").innerHTML = "👌";
     }
-            if (results[1].label == "sad") {
-        document.getElementById("update_emoji").innerHTML = "😢";
+    
+        if (results[1].label == "all the best!!") {
+        document.getElementById("update_emoji").innerHTML = "👍";
+    }
+            if (results[1].label == "that was a marvelous victory!!") {
+        document.getElementById("update_emoji").innerHTML = "✌";
     }
     
 }
