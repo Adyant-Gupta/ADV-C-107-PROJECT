@@ -19,8 +19,47 @@ function takeSnapshot(){
 
 console.log("ml5 version" , ml5.version);
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/KYItfkXml/model.json' , modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/q2tBpXYrK/model.json' , modelLoaded);
 
 function modelLoaded(){
     console.log("Model Loaded");
+}
+
+function check() {
+    var img = document.getElementById("captured_image");
+    classifier.classify(img , gotResult());
+}
+
+function gotResult(error,results) {
+    if (error) {
+        console.error(error);
+    }
+    
+    else {
+        console.log(results);
+        document.getElementById("result_emotion_name").innerHTML = results[0].label;
+        document.getElementById("result_emotion_name2").innerHTML = results[1].label;
+    }
+    if (results[0].label == "happy") {
+        document.getElementById("update_emoji").innerHTML = "😃";
+    }
+    
+        if (results[0].label == "angry") {
+        document.getElementById("update_emoji").innerHTML = "👿";
+    }
+            if (results[0].label == "sad") {
+        document.getElementById("update_emoji").innerHTML = "😢";
+    }
+    
+        if (results[1].label == "happy") {
+        document.getElementById("update_emoji").innerHTML = "😃";
+    }
+    
+        if (results[1].label == "angry") {
+        document.getElementById("update_emoji").innerHTML = "👿";
+    }
+            if (results[1].label == "sad") {
+        document.getElementById("update_emoji").innerHTML = "😢";
+    }
+    
 }
